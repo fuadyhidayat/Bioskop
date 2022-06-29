@@ -1,0 +1,8 @@
+﻿@using Bioskop.Shared.Cinemas.Constants
+@using Bioskop.Bsui.Features.Cinemas.Constants
+
+<MudNavMenu>
+    <MudNavLink Href="@CommonRouteFor.Index" Match="NavLinkMatch.All">Home</MudNavLink>
+    <MudNavLink Href="Counter" Match="NavLinkMatch.Prefix">Counter</MudNavLink>
+    <MudNavLink Href="@RouteFor.Index" Match="NavLinkMatch.Prefix">@DisplayTextFor.Cinemas</MudNavLink>
+</MudNavMenu>

@@ -1,0 +1,30 @@
+﻿<a href="@Href" class="@_class">@Text</a>
+
+@code {
+    [Parameter]
+    public string Text { get; set; } = default!;
+
+    [Parameter]
+    public string Href { get; set; } = default!;
+
+    [Parameter]
+    public int Tipe { get; set; } = default!;
+
+    private string _class = default!;
+
+    protected override void OnParametersSet()
+    {
+        if (Tipe == 1)
+        {
+            _class = "btn btn-primary";
+        }
+        else if (Tipe == 2)
+        {
+            _class = "btn btn-secondary";
+        }
+        else
+        {
+            _class = "btn btn-default";
+        }
+    }
+}

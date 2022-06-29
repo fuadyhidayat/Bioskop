@@ -1,0 +1,18 @@
+﻿@page "/"
+
+@using Bioskop.Shared.Cinemas.Constants
+@using Bioskop.Bsui.Features.Cinemas.Constants
+
+<BrowserTabTitle Text="Home" />
+<PageHeader Text="Hello, world!" />
+
+Welcome to your new app.
+
+<MyLink Text="@DisplayTextFor.Cinemas" Href="@RouteFor.Index" Tipe="2" />
+<ButtonGroup />
+<MudIcon Icon="@Icons.Filled.Movie" Color="Color.Primary" />
+<MudStack Row="true" Justify="Justify.SpaceBetween">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+</MudStack>
