@@ -1,0 +1,12 @@
+﻿@using Features.Movies.Models
+
+<div class="pilem">
+    <img src="@Movie.ImageSource" />
+    <h3>@Movie.Title</h3>
+    <h3>@Movie.Keterangan</h3>
+</div>
+
+@code {
+    [Parameter]
+    public MovieCardModel Movie { get; set; } = default!;
+}

@@ -1,0 +1,13 @@
+﻿.pilem
+{
+    width: 300px;
+    height: 400px;
+    background-color: pink;
+    border: solid 1px black;
+}
+
+    .pilem img
+    {
+        max-width: 100%;
+        max-height: 80%;
+    }

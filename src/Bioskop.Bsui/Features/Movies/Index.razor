@@ -1,0 +1,41 @@
+﻿@page "/Movies"
+
+@using Bioskop.Bsui.Features.Movies.Components
+@using Bioskop.Bsui.Features.Movies.Models
+
+<BrowserTabTitle Text="Movies" />
+
+<div class="d-flex flex-wrap gap-4">
+    @foreach (var movie in movies.Skip(1).Take(4))
+    {
+        <MovieCard Movie="movie" />
+    }
+</div>
+
+@code {
+    private List<MovieCardModel> movies = new();
+
+    protected override void OnInitialized()
+    {
+        movies.Add(new MovieCardModel
+            {
+                Title = "Jurassic World Dominion",
+                ImageSource = "images/JurassicWorldDominion.jpg",
+                Keterangan = "Lorem ipsum dolor sit amet."
+            });
+
+        movies.Add(new MovieCardModel
+            {
+                Title = "Doctor Strange",
+                ImageSource = "images/JurassicWorldDominion.jpg",
+                Keterangan = "Keterangan untuk filem"
+            });
+
+        movies.Add(new MovieCardModel
+            {
+                Title = "Top Gun: Maverick",
+                ImageSource = "images/JurassicWorldDominion.jpg",
+                Keterangan = "Keterangan untuk filem"
+            });
+    }
+}
